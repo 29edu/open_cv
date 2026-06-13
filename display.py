@@ -13,9 +13,18 @@ if img is not None:
     h , w = img.shape[:2]
     print(f'Height is {h} And Width is {w}')
     
+    # Gray scale ->  Will show image in Gray Colour (1 channel)
+    gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
+    cv.imshow("Gray Picture", gray)
+    cv.waitKey(0)
+    
+    
+    
     cv.destroyAllWindows()
     
 else:
     print("Not able to load the image")
+    
+
 
 
